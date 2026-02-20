@@ -1,0 +1,10 @@
+{
+  "ensemble_auc": 0.9581,
+  "xgb_auc": 0.9534,
+  "model_type": "XGBoost + scikit-learn Ensemble",
+  "models": [
+    "XGBoost",
+    "Random Forest",
+    "Logistic Regression"
+  ]
+}

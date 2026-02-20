@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Mesh Gradient Background ── */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.18) 0px, transparent 55%),
+    radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.18) 0px, transparent 55%),
+    radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.15) 0px, transparent 55%),
+    radial-gradient(at 0% 100%, rgba(139, 92, 246, 0.12) 0px, transparent 55%);
+  background-attachment: fixed;
+  color: #1e293b;
+  min-height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Glassmorphism Utilities ── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.70);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+}
+
+.glass-card-hover {
+  background: rgba(255, 255, 255, 0.70);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.glass-card-hover:hover {
+  transform: scale(1.015);
+  box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.13);
+}
+
+.sidebar-glass {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.navbar-glass {
+  background: rgba(255, 255, 255, 0.80);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+}
+
+/* ── Confidence Gauge Animation ── */
+@keyframes gaugeIn {
+  0% { stroke-dasharray: 0 100; }
+}
+.gauge-circle {
+  animation: gaugeIn 0.8s ease-out forwards;
+  transition: stroke-dasharray 0.6s ease-in-out;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c4b5fd; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #a78bfa; }

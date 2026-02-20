@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-multipart
+requests
+joblib
+pandas
+numpy
+scikit-learn
+reportlab
+python-dotenv
+# ML Deps if needed (Vercel has 250MB limit, so be careful)
+xgboost
