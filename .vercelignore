@@ -1,0 +1,13 @@
+*.pyc
+__pycache__/
+.git/
+.gitignore
+.env
+.ds_store
+test_*.py
+tests/
+frontend/node_modules/
+frontend/dist/
+*.log
+*.vcf
+vcf_feature_extractor/
